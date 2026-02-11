@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLM – Interaction Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #222222;
+            background-color: #ffffff;
+        }
+
+        .example-box {
+            background-color: #f2f2f2;
+            color: #000000;
+        }
+
+        nav {
+
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        nav a {
+            color: #000080;
+        }
+
+        table {
+            font-size: 15px;
+        }
+
+        caption {
+            color: #003366;
+            font-size: 14px;
+        }
+
+        thead {
+            background-color: #fff3cd;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Keystroke-Level Model (KLM)</h1>
+        <p>This page explains the Keystroke-Level Model (KLM) and how it predicts the time an expert user takes to
+            complete simple tasks.</p>
+
+    </header>
+
+    <nav aria-label="Primary navigation">
+        <ul>
+            <li><a href="comparison.html">Norman vs GOMS vs KLM</a></li>
+            <li><a href="norman&goms.html">Norman & GOMS</a></li>
+            <li><a href="klm.html" aria-current="page">KLM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p> The Keystroke-Level Model (KLM) is a predictive model introduced by Card, Moran,
+                and Newell. It is based on the understanding of the human motor system and is
+                used to make detailed predictions about expert user performance
+                (Dix et al., Human–Computer Interaction, Ch. 12).
+            <p>KLM predicts execution time for routine, highly practiced tasks, typically short in duration.. Examples
+                include using search and replace or changing a font.
+                It does not model complex problem-solving tasks. Those tasks must first be
+                decomposed into subtasks, as in GOMS.</p>
+            <p>
+                The model divides activity into two phases:
+            </p>
+
+            <ul>
+                <li><strong>Acquisition Phase:</strong> The user builds a mental representation of the task.</li>
+                <li><strong>Execution Phase:</strong> The user performs physical actions using the system.</li>
+            </ul>
+
+            <p>
+                KLM predicts performance only during the execution phase. The user is assumed
+                to be expert and error-free.
+            </p>
+        </section>
+
+        <section>
+            <h2>KLM Operators</h2>
+
+            <p>
+                The execution phase is decomposed into physical, mental, and system operators
+                (Dix et al., Ch. 12, p. 436):
+            </p>
+
+            <ul>
+                <li><strong>K:</strong> Keystroke (pressing a key)</li>
+                <li><strong>B:</strong> Pressing a mouse button</li>
+                <li><strong>P:</strong> Pointing to a target</li>
+                <li><strong>H:</strong> Homing (moving hand between keyboard and mouse)</li>
+                <li><strong>D:</strong> Drawing using the mouse</li>
+                <li><strong>M:</strong> Mental preparation</li>
+                <li><strong>R:</strong> System response time</li>
+            </ul>
+
+            <p>
+                Total execution time is calculated as:
+            </p>
+
+            <p>
+                <strong>T<sub>execute</sub> = TK + TB + TP + TH + TD + TM + TR</strong>
+            </p>
+
+            <p>
+                Operator times are derived from empirical studies. For example:
+            </p>
+        </section>
+
+        <section>
+            <h2>Typical Operator Times</h2>
+
+            <table border="1">
+                <caption>Typical KLM Operator Times (Dix et al., Ch. 12)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Operator</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Typical Time (seconds)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">K</th>
+                        <td>Keystroke (good typist)</td>
+                        <td>0.12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">B</th>
+                        <td>Mouse button press</td>
+                        <td>0.10–0.20</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">P</th>
+                        <td>Pointing (average)</td>
+                        <td>1.10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">H</th>
+                        <td>Homing</td>
+                        <td>0.40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">M</th>
+                        <td>Mental preparation</td>
+                        <td>1.35</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="example-box">
+            <h2>Worked Exercise: Opening an Application</h2>
+
+            <p>
+                Three methods were analyzed: double-clicking, using an accelerator key,
+                and using a menu. Results varied depending on input device.
+            </p>
+
+            <table border="1">
+                <caption>Total Execution Time for Opening an Application</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">Mouse (s)</th>
+                        <th scope="col">Trackball 1 (s)</th>
+                        <th scope="col">Trackball 2 (s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Double Click</th>
+                        <td>1.864</td>
+                        <td>2.313</td>
+                        <td>1.513</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Accelerator Key</th>
+                        <td>3.214</td>
+                        <td>3.663</td>
+                        <td>2.763</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Menu Method</th>
+                        <td>4.591</td>
+                        <td>6.024</td>
+                        <td>5.224</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                The results show that device position and homing time significantly affect
+                performance predictions.
+            </p>
+        </section>
+        <section>
+            <h2>Common HTML Errors</h2>
+            <p>Test your understanding of semantic HTML, accessibility, and best practices with these simple, unique
+                mistakes. Each question shows the correct answer and a short explanation.</p>
+
+            <ul>
+                <li>
+                    <strong>Q1:</strong> What is wrong here?
+                    <code>&lt;header&gt;My Page&lt;footer&gt;Footer&lt;/header&gt;</code>
+                    <br><strong>Answer:</strong> The <code>footer</code> is incorrectly placed inside
+                    <code>header</code>. Correct:
+                    <code>&lt;header&gt;My Page&lt;/header&gt;&lt;footer&gt;Footer&lt;/footer&gt;</code>
+                    <em>Explanation:</em> Each semantic section should be separate to maintain document structure.
+                </li>
+
+                <li>
+                    <strong>Q2:</strong> Identify the issue:
+                    <code>&lt;ul&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;li&gt;Banana&lt;/li&gt;&lt;p&gt;Orange&lt;/p&gt;&lt;/ul&gt;</code>
+                    <br><strong>Answer:</strong> The <code>p</code> tag is inside <code>ul</code>, which is invalid.
+                    Correct:
+                    <code>&lt;ul&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;li&gt;Banana&lt;/li&gt;&lt;li&gt;Orange&lt;/li&gt;&lt;/ul&gt;</code>
+                    <em>Explanation:</em> Only <code>li</code> elements are allowed inside <code>ul</code> or
+                    <code>ol</code>.
+                </li>
+
+                <li>
+                    <strong>Q3:</strong> What’s missing here?
+                    <code>&lt;img src="logo.png"&gt;</code>
+                    <br><strong>Answer:</strong> Missing <code>alt</code> attribute. Correct:
+                    <code>&lt;img src="logo.png" alt="Website Logo"&gt;</code>
+                    <em>Explanation:</em> Alt text is important for accessibility and when the image cannot load.
+                </li>
+
+                <li>
+                    <strong>Q4:</strong> Why is this heading wrong?
+                    <code>&lt;h2&gt;Section Title&lt;/h4&gt;</code>
+                    <br><strong>Answer:</strong> Closing tag does not match opening tag. Correct:
+                    <code>&lt;h2&gt;Section Title&lt;/h2&gt;</code>
+                    <em>Explanation:</em> Matching heading tags preserves hierarchy and accessibility.
+                </li>
+
+                <li>
+                    <strong>Q5:</strong> Identify the mistake:
+                    <code>&lt;a href="#"&gt;&lt;li&gt;Home&lt;/li&gt;&lt;/a&gt;</code>
+                    <br><strong>Answer:</strong> <code>li</code> cannot wrap <code>a</code>. Correct:
+                    <code>&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code>
+                    <em>Explanation:</em> Links should be inside list items, not the other way around.
+                </li>
+
+                <li>
+                    <strong>Q6:</strong> What’s wrong with this form?
+                    <code>&lt;input type="text" placeholder="Name"&gt;</code>
+                    <br><strong>Answer:</strong> Missing <code>label</code> for accessibility. Correct:
+                    <code>&lt;label for="name"&gt;Name&lt;/label&gt;&lt;input type="text" id="name" name="name" placeholder="Name"&gt;</code>
+                    <em>Explanation:</em> Labels help screen readers identify form fields.
+                </li>
+
+                <li>
+                    <strong>Q7:</strong> Find the nesting error:
+                    <code>&lt;div&gt;&lt;section&gt;Content&lt;/div&gt;&lt;/section&gt;</code>
+                    <br><strong>Answer:</strong> Tags are incorrectly nested. Correct:
+                    <code>&lt;div&gt;&lt;section&gt;Content&lt;/section&gt;&lt;/div&gt;</code>
+                    <em>Explanation:</em> HTML must have properly nested elements for valid structure.
+                </li>
+
+                <li>
+                    <strong>Q8:</strong> What’s wrong with this table?
+                    <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Score&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code>
+                    <br><strong>Answer:</strong> Missing <code>thead</code> and <code>scope</code>. Correct:
+                    <code>&lt;table&gt;&lt;caption&gt;Player Scores&lt;/caption&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Name&lt;/th&gt;&lt;th scope="col"&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</code>
+                    <em>Explanation:</em> Headers with scope improve accessibility and readability.
+                </li>
+
+                <li>
+                    <strong>Q9:</strong> Identify the error:
+                    <code>&lt;p&gt;Hello&lt;p&gt;&lt;span&gt;World&lt;/span&gt;</code>
+                    <br><strong>Answer:</strong> First <code>p</code> tag not closed. Correct:
+                    <code>&lt;p&gt;Hello&lt;/p&gt;&lt;span&gt;World&lt;/span&gt;</code>
+                    <em>Explanation:</em> Paragraphs must be closed before starting other elements.
+                </li>
+
+                <li>
+                    <strong>Q10:</strong> Why is this navigation wrong?
+                    <code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;Home&lt;/li&gt;&lt;li&gt;About&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code>
+                    <br><strong>Answer:</strong> Links are missing. Correct:
+                    <code>&lt;nav aria-label="Main navigation"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code>
+                    <em>Explanation:</em> Navigation requires <code>a</code> tags for clickable links.
+                </li>
+            </ul>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2026 HCI Lab 01 – Norman, GOMS, KLM – Based on Dix et al.</p>
+    </footer>
+</body>
+
+</html>

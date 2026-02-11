@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norman vs GOMS vs KLM – Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #222222;
+            background-color: #ffffff;
+        }
+
+        nav a,
+        h1,
+        h2,
+        th,
+        caption {
+            color: #000080;
+        }
+
+        table {
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 14px;
+            color: #003366;
+        }
+
+        thead {
+            background-color: #fff3cd; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Comparison: Norman, GOMS, and KLM</h1>
+        <p>This page compares Norman’s Action Cycle, GOMS, and KLM, highlighting their purpose, focus, and usage in HCI.
+        </p>
+    </header>
+
+    <nav aria-label="Primary navigation">
+        <ul>
+            <li><a href="comparison.html" aria-current="page">Norman vs GOMS vs KLM</a></li>
+            <li><a href="norman&goms.html">Norman & GOMS</a></li>
+            <li><a href="klm.html">KLM</a></li>
+           
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <img src="norman,goms&klm.png" alt="Diagram comparing Don Norman’s interaction model, GOMS model, and Keystroke-Level Model">
+            <h2>Norman vs GOMS vs KLM</h2>
+            <table border="1">
+                <caption>Comparison of HCI Models (Dix et al., Ch. 9 & 12)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Aspect</th>
+                        <th scope="col">Norman</th>
+                        <th scope="col">GOMS</th>
+                        <th scope="col">KLM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Focus</th>
+                        <td>High-level user interaction: goal formation, execution, evaluation</td>
+                        <td>Expert, routine task performance; structured task decomposition</td>
+                        <td>Execution time prediction for low-level actions</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cognitive Scope</th>
+                        <td>Perceptual, cognitive, motor stages</td>
+                        <td>Structured task steps & choice rules</td>
+                        <td>Physical operators only (K,P,H,D,M,R)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Assumes Expert Users?</th>
+                        <td>No, includes errors & interpretation</td>
+                        <td>Yes, error-free</td>
+                        <td>Yes, error-free</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Predictive Output</th>
+                        <td>Qualitative usability insights</td>
+                        <td>Task structure and predicted user behavior</td>
+                        <td>Execution time for routine tasks</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Components</th>
+                        <td>Stages of action: goal → execution → evaluation; gulfs of execution/evaluation</td>
+                        <td>Goals, Operators, Methods, Selection rules</td>
+                        <td>Operators only: Keystroke, Pointing, Homing, Drawing, Mental, System response</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Best Use</th>
+                        <td>Diagnosing UI problems; understanding user thought processes</td>
+                        <td>Analyzing expert task performance & method comparison</td>
+                        <td>Comparing interface efficiency quantitatively</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Limitation</th>
+                        <td>Not predictive of exact timings</td>
+                        <td>Not suitable for novices or errors</td>
+                        <td>Does not model planning, goals, or method selection</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HCI Lab 01 – Norman, GOMS, KLM – Based on Dix et al.</p>
+    </footer>
+</body>
+
+</html>

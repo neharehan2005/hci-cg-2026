@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norman and GOMS – Interaction Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #222222;
+            background-color: #ffffff;
+        }
+
+        .example-box {
+            background-color: #f2f2f2;
+            color: #000000;
+        }
+
+        nav {
+
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        nav a {
+            color: #000080;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #000080;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Norman’s Action Cycle, Evaluation, and GOMS</h1>
+        <p>This page explains Norman’s interaction cycle and the GOMS model, showing how users plan, act, and evaluate system feedback.</p>
+
+    </header>
+
+    <nav aria-label="Primary navigation">
+        <ul>
+           <li><a href="comparison.html">Norman vs GOMS vs KLM</a></li>
+            <li><a href="norman&goms.html" aria-current="page">Norman & GOMS</a></li>
+            <li><a href="klm.html">KLM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Don Norman & Evaluation</h2>
+            <p>Don Norman’s work in HCI emphasizes understanding the user’s interaction cycle with systems, focusing on
+                how
+                people plan, act, and interpret feedback. His theory is often illustrated through the
+                execution–evaluation
+                cycle, which divides interaction into two stages:
+                Execution: The user forms a goal, decides on actions, and performs them.
+                Evaluation: The user perceives the system’s response, interprets it, and evaluates if the goal is
+                achieved.
+            </p>
+
+            <section>
+                <h3>Connection with Evaluation Techniques in HCI</h3>
+                <p>Norman’s theory links directly to usability evaluation methods discussed in (Dix et al.,
+                    Human–Computer Interaction, Ch. 9)</p>
+
+                <h4>Observation and Post-Task Walkthroughs:</h4>
+                <ul>
+                    <li>Observing users shows what actions were taken, but not always why.</li>
+                    <li>A post-task walkthrough lets participants reflect on their actions, providing insight into
+                        goals,
+                        intentions, and alternative strategies.</li>
+                    <li>This aligns with Norman’s evaluation stage — understanding user interpretation and thought
+                        processes.</li>
+                </ul>
+
+                <h4>Query Techniques (Interviews & Questionnaires):</h4>
+                <ul>
+                    <li>Interviews and questionnaires capture user feedback about the system’s usability, helping
+                        evaluators
+                        understand users’ mental models and satisfaction.</li>
+                    <li>They complement observations and walkthroughs, filling gaps in understanding why users acted in
+                        certain ways, linking to Norman’s theory of evaluation and interpretation.</li>
+
+                </ul>
+
+                <h4>DRUM System Example:</h4>
+                <ul>
+                    <li>Tools like DRUM provide video annotation, tagging, and analytic metrics for usability studies.
+                    </li>
+                    <li>They help systematically collect and analyze data on user performance and cognitive workload —
+                        supporting Norman’s approach to understanding how users interact with systems.</li>
+
+                </ul>
+            </section>
+
+            <section class="example-box">
+                <h3>Example: Withdrawing Cash from an ATM</h3>
+                <p>Seven Stages of Action</p>
+                <ul>
+                    <li><strong>Forming the Goal:</strong> I want to withdraw cash.</li>
+                    <li><strong>Forming the Intention Decide:</strong> I will use my debit card at the ATM to get money.
+                    </li>
+                    <li><strong>Specifying the Action Plan:</strong> Insert card → enter PIN → select “Withdraw Cash” →
+                        choose amount → collect cash.</li>
+                    <li><strong>Executing the Action Do it:</strong> Insert card, type PIN, select options, press
+                        confirm.
+                    </li>
+                    <li><strong>Perceiving the State of the World Notice:</strong> Screen shows confirmation, cash comes
+                        out, card returned.</li>
+                    <li><strong>Interpreting the Perception Understand:</strong> Did the ATM dispense the correct
+                        amount?
+                        Did my balance update?</li>
+                    <li><strong>Evaluating the Outcome Check:</strong> Do I have the cash? Is the transaction
+                        successful? if
+                        yes → goal achieved,if no → maybe reattempt or call bank.</li>
+                </ul>
+                <p><strong>Gulf of execution:</strong> Confusion if the screen menu isn’t clear or buttons are hard to
+                    read,
+                    <strong>Gulf of evaluation:</strong> Uncertainty if the ATM doesn’t clearly indicate success (e.g.,
+                    no
+                    receipt or unclear message).
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+
+            <h2>GOMS</h2>
+            <p>The GOMS model, proposed by Card, Moran and Newell, is a cognitive model used to describe how expert
+                users
+                perform routine tasks. It focuses on structured task execution and is mainly used to analyze expert,
+                error-free performance.GOMS is an acronym for:</p>
+            <ul>
+                <li><strong>Goals:</strong>Goals represent what the user wants to achieve. In GOMS, goals act as memory
+                    points that guide the user and help recover from errors.
+                    Goals are organized hierarchically from high-level tasks to smaller subgoals.</li>
+                <li><strong>Operators:</strong> Operators are the lowest-level actions required to complete a task.
+                    They may be physical actions (pressing a key, moving a mouse)
+                    or mental actions (reading a message).
+                    Operators form the basic building blocks of interaction. </li>
+                <li><strong>Methods:</strong> Methods describe different ways to accomplish the same goal.
+                    For example, a window can be closed by clicking a menu option
+                    or pressing a shortcut key. Each method consists of a sequence of operators.</li>
+                <li><strong>Selection Rules:</strong> When multiple methods exist, selection rules determine which one
+                    is used.
+                    The choice depends on the user, system state, and task context.
+                    These rules allow GOMS to predict user behavior rather than treating it as random.</li>
+            </ul>
+
+
+            <section>
+                <h3>Types of GOMS Models</h3>
+                <p>The GOMS framework has several variations, each suited to different analysis goals:</p>
+                <ul>
+                    <li>
+                        <strong>Original GOMS (Card et al., 1983):</strong>
+                        Focused on expert user behavior. Assumes the user knows correct methods; mental preparation is
+                        included
+                        as M operators in KLM.
+                    </li>
+                    <li>
+                        <strong>CMN-GOMS (Card, Moran, Newell):</strong>
+                        Combines task decomposition with operator-level timing. KLM can calculate predicted execution
+                        time
+                        for
+                        tasks.
+                    </li>
+                    <li>
+                        <strong>Keystroke-Level Model (KLM):</strong>
+                        A subset of GOMS. Focuses on execution times of low-level actions without high-level goal
+                        analysis.
+                    </li>
+                    <li>
+                        <strong>NGOMSL (Natural GOMS Language):</strong>
+                        Developed by Kieras. Structured, procedural representation for automated analysis. Supports
+                        hierarchical
+                        decomposition of goals into subgoals and methods.
+                    </li>
+                    <li>
+                        <strong>CPM-GOMS (Cognitive Perceptual Motor):</strong>
+                        Accounts for parallel execution of cognitive, perceptual, and motor activities. Useful for
+                        modeling
+                        highly skilled expert behavior.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="example-box">
+                <h3>Design Focus: Real-World Impact</h3>
+                <p>A GOMS-style analysis was used by NYNEX (US telephone company) before installing a new operator
+                    support
+                    system.The analysis showed:</p>
+                <ul>
+                    <li>The new system would slow down call processing</li>
+                    <li>The system was abandoned</li>
+                </ul>
+                <p>This saved millions of dollars.This example shows how <strong>GOMS</strong> can support design
+                    decisions
+                    before implementation.(Dix et al., Ch. 12, p. 424)</p>
+            </section>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 HCI Lab 01 – Norman, GOMS, KLM – Based on Dix et al.</p>
+    </footer>
+
+
+</body>
+
+</html>
